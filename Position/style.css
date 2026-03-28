@@ -34,7 +34,7 @@ body {
     background-color: lightgreen;
 }
 
-.parent {
+.absolute-parent {
     position: relative;
     height: 200px;
     width: 200px;
