@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #e2e8f0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.box {
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.orange { background-color: orange; }
+.purple { background-color: purple; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 50px;
+    transition: all 0.3s ease;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: lightgray;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.flex-item {
+    min-width: 250px;
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .flex-container {
+        background-color: lightpink; /* Color changes on medium screens! */
+    }
+    .purple {
+        background-color: hotpink; /* Kids of flex-container change too! */
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .links {
+        margin-top: 15px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .flex-container {
+        background-color: lightgreen; /* Color changes on small screens! */
+    }
+    .purple {
+        background-color: teal; /* Kids of flex-container change too! */
+    }
+}
